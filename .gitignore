@@ -1,0 +1,7 @@
+.venv
+data
+notebooks/experiment.ipynb
+*.pytest_cache
+*__pycache__
+assets
+src/stroke_prediction/hyperparam/mlruns

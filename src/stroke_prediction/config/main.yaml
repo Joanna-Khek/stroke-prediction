@@ -1,0 +1,56 @@
+app:
+  package_name: stroke_prediction
+  training_data_file: train.csv
+  pipeline_name: stroke_prediction
+  pipeline_save_file: stroke_prediction_model_output_v
+
+model:
+  target: stroke
+
+  features:
+    - id
+    - gender
+    - age
+    - hypertension
+    - heart_disease
+    - ever_married
+    - work_type
+    - Residence_type
+    - avg_glucose_level
+    - bmi
+    - smoking_status
+    - stroke
+
+  random_state: 123
+
+  test_size: 0.2
+
+  encode_vars:
+    - gender
+    - ever_married
+    - work_type
+    - Residence_type
+    - smoking_status
+    
+  features_to_drop:
+    - id
+    - smoking_status_Unknown
+
+  smoking_mappings:
+    'formerly smoked': 'smokes'
+    'smokes': 'smokes'
+    'never smoked': 'never_smoked'
+    'Unknown': 'Unknown'
+
+  selected_model_name: gradient_boosting
+
+  selected_model_integer_list:
+    - min_samples_split
+    - n_estimators
+    - random_state
+
+  
+
+
+  
+  

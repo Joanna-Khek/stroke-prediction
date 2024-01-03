@@ -1,0 +1,5 @@
+gradient_boosting:
+  learning_rate: 0.006353709569974215
+  min_samples_split: 8
+  n_estimators: 389
+  random_state: 123
